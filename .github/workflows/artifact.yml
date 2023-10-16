@@ -17,9 +17,10 @@ jobs:
     - name: ${{ env.FILE_NAME }} for ubuntu-latest 
       run: ${{ env.FILE_NAME }}.md
     
-    - name: Upload ${{ env.FILE_NAME }}
+    - name: Upload ${{ env.FILE_NAME }}.md
       uses: actions/upload-artifact@v1.0.0 
       with:
+        name: test.md
         path: ./${{ env.FILE_NAME }}.md
 
     
