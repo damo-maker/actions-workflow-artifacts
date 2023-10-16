@@ -1,0 +1,2 @@
+- This document tests uploading a file
+- by using an artifact in a workflow action
