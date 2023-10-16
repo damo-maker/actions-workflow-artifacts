@@ -3,18 +3,18 @@ name: artifact
 on: [push]
 
 env: 
-  FILE_NAME: Test
+  FILE_NAME: test
 
 jobs:
   build:
-    name: Create Artifact
+    name: Upload a file
     runs-on: ubuntu-latest
     steps:
 
     - name: checkout code
       uses: actions/checkout@v1
     
-    - name: Upload ${{ env.FILE_NAME }}.md
+    - name: Upload ${{ env.FILE_NAME }}
       uses: actions/upload-artifact@v1.0.0 
       with:
         path: ./${{ env.FILE_NAME }}.md
